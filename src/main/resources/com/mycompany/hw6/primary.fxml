@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hw6.PrimaryController">
+<VBox alignment="CENTER" prefHeight="700.0" prefWidth="600.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.hw6.PrimaryController">
    <children>
       <Label text="Choose Sandwich" textFill="RED">
          <font>
@@ -17,7 +17,10 @@
       <Button fx:id="reg_sandwich" onAction="#reg_sandwich" text="Regular Sandwich" textFill="BLUE"><font><Font size="18.0" /></font></Button>
       <Button fx:id="cheese_sandwich" onAction="#cheese_sandwich" text="Cheese Sandwich" textFill="BLUE"><font><Font size="18.0" /></font></Button>
       <Button fx:id="veggie_sandwich" onAction="#veggie_sandwich" text="Vegetable Sandwich" textFill="BLUE"><font><Font size="18.0" /></font></Button>
-     <TextArea fx:id="textoutput" />
+     <TextArea fx:id="textoutput" editable="false" text="Your Order"><font>
+            <Font size="20.0" />
+     </font>
+     </TextArea>
    </children>
    <padding>
       <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
