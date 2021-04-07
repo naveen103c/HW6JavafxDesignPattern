@@ -18,7 +18,7 @@ public class PrimaryController {
     String Output = "";
 
     @FXML
-    private void reg_sandwich() throws IOException {
+    public void reg_sandwich() throws IOException {
         Output = "";
         Sandwitch_template cust1 = new RegularSandwich();
         cust1.makeSandwich();
@@ -26,7 +26,7 @@ public class PrimaryController {
     }
 
     @FXML
-    private void veggie_sandwich() throws IOException {
+    public void veggie_sandwich() throws IOException {
          Output = "";
         Sandwitch_template cust2 = new VeggieSandwich();
         cust2.makeSandwich();
@@ -34,7 +34,7 @@ public class PrimaryController {
     }
 
     @FXML
-    private void cheese_sandwich() throws IOException {
+    public void cheese_sandwich() throws IOException {
          Output = "";Sandwitch_template cust3 = new CheeseSandwich();
         cust3.makeSandwich();
            textoutput.setText(Output);
@@ -51,7 +51,7 @@ public class PrimaryController {
             }
             wrapthesandwich();
         }
-        private void cutBurger() {
+        public void cutBurger() {
             Output += "The Burger is cut\n";
         }
         abstract void addCheese();
@@ -62,7 +62,7 @@ public class PrimaryController {
         boolean custWantVegetables() {
             return true;
         }
-        private void wrapthesandwich() {
+        public void wrapthesandwich() {
             Output += "The sandwich is wrapped and ready\n";            
         }
     }
@@ -121,8 +121,24 @@ public class PrimaryController {
         }
     }
     public int sum(int a,int b) {
-        int sum = 0;
-        sum=a+b;
-            return sum;
+        int res = 0;
+        res=a+b;
+        return res;
     } 
+     public int multiply(int a,int b) {
+        int res = 0;
+        res=a*b;
+        return res;
+    }
+     public int divide(int a,int b) {
+        int res = 0;
+        res=a/b;
+        return res;
+    }
+     public String compare(String a,String b) {
+        String res="Not equal";
+        if(a.equals(b))
+        res="Equal";
+        return res;
+    }
 }
