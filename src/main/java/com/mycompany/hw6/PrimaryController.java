@@ -27,20 +27,22 @@ public class PrimaryController {
 
     @FXML
     public void veggie_sandwich() throws IOException {
-         Output = "";
+        Output = "";
         Sandwitch_template cust2 = new VeggieSandwich();
         cust2.makeSandwich();
-          textoutput.setText(Output);
+        textoutput.setText(Output);
     }
 
     @FXML
     public void cheese_sandwich() throws IOException {
-         Output = "";Sandwitch_template cust3 = new CheeseSandwich();
+        Output = "";
+        Sandwitch_template cust3 = new CheeseSandwich();
         cust3.makeSandwich();
-           textoutput.setText(Output);
+        textoutput.setText(Output);
     }
 
     public abstract class Sandwitch_template {
+
         final void makeSandwich() {
             cutBurger();
             if (custWantCheese()) {
@@ -51,25 +53,33 @@ public class PrimaryController {
             }
             wrapthesandwich();
         }
+
         public void cutBurger() {
             Output += "The Burger is cut\n";
         }
+
         abstract void addCheese();
+
         abstract void addVegetables();
+
         boolean custWantCheese() {
             return true;
         }
+
         boolean custWantVegetables() {
             return true;
         }
+
         public void wrapthesandwich() {
-            Output += "The sandwich is wrapped and ready\n";            
+            Output += "The sandwich is wrapped and ready\n";
         }
     }
 
     public class RegularSandwich extends Sandwitch_template {
+
         String cheeseused[] = {"Cheese Cubes"};
         String veggiesused[] = {"tomata", "onion", "potato"};
+
         @Override
         void addCheese() {
             Output += "Adding the Cheese\n";
@@ -77,6 +87,7 @@ public class PrimaryController {
                 Output += "Added : " + c + "\n";
             }
         }
+
         @Override
         void addVegetables() {
             Output += "Adding the Vegetables\n";
@@ -87,10 +98,13 @@ public class PrimaryController {
     }
 
     public class VeggieSandwich extends Sandwitch_template {
+
         String veggiesused[] = {"tomata", "onion", "potato"};
+
         boolean custWantCheese() {
             return false;
         }
+
         @Override
         void addVegetables() {
             Output += "Adding the Vegetables\n";
@@ -98,6 +112,7 @@ public class PrimaryController {
                 Output += "Added : " + v + "\n";
             }
         }
+
         @Override
         void addCheese() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -105,10 +120,13 @@ public class PrimaryController {
     }
 
     public class CheeseSandwich extends Sandwitch_template {
+
         String cheeseused[] = {"Cheese Cubes"};
+
         boolean custWantVegetables() {
             return false;
         }
+
         @Override
         void addCheese() {
             Output += "Adding the Cheese\n";
@@ -116,29 +134,48 @@ public class PrimaryController {
                 Output += "Added : " + c + "\n";
             }
         }
+
         @Override
         void addVegetables() {
         }
     }
-    public int sum(int a,int b) {
+
+    public int sum(int a, int b) {
         int res = 0;
-        res=a+b;
-        return res;
-    } 
-     public int multiply(int a,int b) {
-        int res = 0;
-        res=a*b;
+        res = a + b;
         return res;
     }
-     public int divide(int a,int b) {
+
+    public int multiply(int a, int b) {
         int res = 0;
-        res=a/b;
+        res = a * b;
         return res;
     }
-     public String compare(String a,String b) {
-        String res="Not equal";
-        if(a.equals(b))
-        res="Equal";
+
+    public int divide(int a, int b) {
+        int res = 0;
+        res = a / b;
         return res;
     }
+
+    public String compare(String a, String b) {
+        String res = "Not equal";
+        if (a.equals(b)) {
+            res = "Equal";
+        }
+        return res;
+    }
+
+    public String check2() {
+        return "Tst";
+    }
+
+    public int check() {
+        return 0;
+    }
+
+    public int Sandwichprice(int num) {
+        return 10 * num;
+    }
+
 }

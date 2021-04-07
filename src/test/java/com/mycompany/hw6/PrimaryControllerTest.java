@@ -1,29 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.hw6;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-/**
- *
- * @author brkgb
- */
 public class PrimaryControllerTest {
 
     public PrimaryControllerTest() {
     }
 
-    /**
-     * Test of sum method, of class PrimaryController.
-     */
     @Test
     public void testSum() {
         System.out.println("sum");
@@ -33,13 +17,7 @@ public class PrimaryControllerTest {
         int expResult = 0;
         int result = instance.sum(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-
     }
-
-    /**
-     * Test of multiply method, of class PrimaryController.
-     */
     @Test
     public void testMultiply() {
         System.out.println("multiply");
@@ -49,13 +27,7 @@ public class PrimaryControllerTest {
         int expResult = 0;
         int result = instance.multiply(a, b);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-
     }
-
-    /**
-     * Test of divide method, of class PrimaryController.
-     */
     @Test
     public void testDivide() {
         System.out.println("divide");
@@ -64,14 +36,9 @@ public class PrimaryControllerTest {
         PrimaryController instance = new PrimaryController();
         int expResult = 1;
         int result = instance.divide(a, b);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-
+        assertEquals(expResult, result);        
     }
 
-    /**
-     * Test of compare method, of class PrimaryController.
-     */
     @Test
     public void testCompare() {
         System.out.println("compare");
@@ -82,7 +49,24 @@ public class PrimaryControllerTest {
         String result = instance.compare(a, b);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-
+    }
+    @Test
+    public void testReg_sandwich() throws Exception {
+    }
+    @Test
+    public void testVeggie_sandwich() throws Exception {
+    }
+    @Test
+    public void testCheese_sandwich() throws Exception {
+    }
+    @Test
+    public void testCheck() {
+    }
+    @Test
+    public void testSandwichprice() {
+    }
+    @Test
+    public void testCheck2() {
     }
 
 }
