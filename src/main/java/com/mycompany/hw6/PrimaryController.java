@@ -35,14 +35,12 @@ public class PrimaryController {
 
     @FXML
     private void cheese_sandwich() throws IOException {
-        
          Output = "";Sandwitch_template cust3 = new CheeseSandwich();
         cust3.makeSandwich();
            textoutput.setText(Output);
     }
 
     public abstract class Sandwitch_template {
-
         final void makeSandwich() {
             cutBurger();
             if (custWantCheese()) {
@@ -53,34 +51,25 @@ public class PrimaryController {
             }
             wrapthesandwich();
         }
-
         private void cutBurger() {
             Output += "The Burger is cut\n";
         }
-
         abstract void addCheese();
-
         abstract void addVegetables();
-
         boolean custWantCheese() {
             return true;
         }
-
         boolean custWantVegetables() {
             return true;
         }
-
         private void wrapthesandwich() {
-            Output += "The sandwich is wrapped and ready\n";
-            //textoutput.appendText("The sandwich is wrapped and ready\n");
+            Output += "The sandwich is wrapped and ready\n";            
         }
     }
 
     public class RegularSandwich extends Sandwitch_template {
-
         String cheeseused[] = {"Cheese Cubes"};
         String veggiesused[] = {"tomata", "onion", "potato"};
-
         @Override
         void addCheese() {
             Output += "Adding the Cheese\n";
@@ -88,7 +77,6 @@ public class PrimaryController {
                 Output += "Added : " + c + "\n";
             }
         }
-
         @Override
         void addVegetables() {
             Output += "Adding the Vegetables\n";
@@ -99,13 +87,10 @@ public class PrimaryController {
     }
 
     public class VeggieSandwich extends Sandwitch_template {
-
         String veggiesused[] = {"tomata", "onion", "potato"};
-
         boolean custWantCheese() {
             return false;
         }
-
         @Override
         void addVegetables() {
             Output += "Adding the Vegetables\n";
@@ -113,7 +98,6 @@ public class PrimaryController {
                 Output += "Added : " + v + "\n";
             }
         }
-
         @Override
         void addCheese() {
             throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -121,13 +105,10 @@ public class PrimaryController {
     }
 
     public class CheeseSandwich extends Sandwitch_template {
-
         String cheeseused[] = {"Cheese Cubes"};
-
         boolean custWantVegetables() {
             return false;
         }
-
         @Override
         void addCheese() {
             Output += "Adding the Cheese\n";
@@ -135,9 +116,13 @@ public class PrimaryController {
                 Output += "Added : " + c + "\n";
             }
         }
-
         @Override
         void addVegetables() {
         }
     }
+    public int sum(int a,int b) {
+        int sum = 0;
+        sum=a+b;
+            return sum;
+    } 
 }
